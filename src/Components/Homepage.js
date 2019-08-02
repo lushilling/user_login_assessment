@@ -6,7 +6,7 @@ export default class Homepage extends React.Component {
 
         return (
             <div>
-                <p>Description about Assessment</p><br />
+                <p></p><br />
                 <p>On this React app you can register a user, login as a user and view a list of users</p>
             </div>
         );

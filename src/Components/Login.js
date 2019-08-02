@@ -14,14 +14,20 @@ export default class Login extends React.Component {
    getRequest = (e) => {
         e.preventDefault();
 
-        let newUser = {
+        let loginUser = {
             username: e.target[0].value,
             password: e.target[1].value
         }
 
-        console.log(newUser);
+        console.log(loginUser);
 
-        axios.get("http://localhost:5000/user/name/:username/:password", newUser)
+        if (loginUser.username === "" || loginUser.password === "" ){
+            this.setState({error:"Please ensure you have filled out all the fields"})
+        }else{
+            this.setState({error:""})
+        }
+
+        axios.get("http://localhost:5000/user/name/:username/:password", loginUser)
             .then(response => {
                 this.setState({
                     data: response.data

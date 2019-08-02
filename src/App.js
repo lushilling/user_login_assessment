@@ -6,6 +6,8 @@ import { BrowserRouter as Router, Route } from "react-router-dom";
 import NavigationBar from './Components/NavigationBar';
 import Homepage from './Components/Homepage';
 import Register from './Components/Register';
+import User from './Components/User';
+import UserList from './Components/UserList';
 
 export default class App extends React.Component {
 
@@ -40,6 +42,18 @@ export default class App extends React.Component {
           <Route exact path="/" component={Homepage} />
 
           <Route path="/Register" component={Register} render={() => <Register onLoadFunction={this.onload} data={this.state.data} />} />
+
+          <Route exact path="/UserList" render={() => <UserList onLoadFunction={this.onload} data={this.state.data} />} />
+
+          {this.state.data.map((user) => (
+
+            <Route path={"/" + user.name} render={() => <User passedFunction={this.onLoad}
+              username={user.username}
+              email={user.email}
+              password={user.password}
+              password2={user.password2} />} />
+
+          ))}
 
         </Router>
       </div >

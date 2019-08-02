@@ -11,7 +11,7 @@ export default class Login extends React.Component {
             password: ""
         }
     }
-    postRequest = (e) => {
+   getRequest = (e) => {
         e.preventDefault();
 
         let newUser = {
@@ -20,7 +20,8 @@ export default class Login extends React.Component {
         }
 
         console.log(newUser);
-        axios.post("http://localhost:5000/user/createuser", newUser)
+
+        axios.get("http://localhost:5000/user/name/:username/:password", newUser)
             .then(response => {
                 this.setState({
                     data: response.data
@@ -30,7 +31,7 @@ export default class Login extends React.Component {
     }
     render() {
         return (
-            <Form inline>
+            <Form inline onSubmit={this.getRequest}>
                 <FormGroup className="mb-2 mr-sm-2 mb-sm-0">
                     <Label for="username" className="mr-sm-2">Username: </Label>
                     <Input type="text" name="username" id="username" placeholder="Enter Username" />

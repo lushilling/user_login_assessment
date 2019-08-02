@@ -8,6 +8,7 @@ import Homepage from './Components/Homepage';
 import Register from './Components/Register';
 import User from './Components/User';
 import UserList from './Components/UserList';
+import Login from './Components/Login';
 
 export default class App extends React.Component {
 
@@ -44,6 +45,8 @@ export default class App extends React.Component {
           <Route path="/Register" component={Register} render={() => <Register onLoadFunction={this.onload} data={this.state.data} />} />
 
           <Route exact path="/UserList" render={() => <UserList onLoadFunction={this.onload} data={this.state.data} />} />
+
+          <Route path="/Login" component={Login} render={() => <Login onLoadFunction={this.onload} data={this.state.data} />} />
 
           {this.state.data.map((user) => (
 

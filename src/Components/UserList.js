@@ -11,7 +11,7 @@ export default class UserList extends React.Component {
                     <tbody>
                         <tr>{this.props.data.map((user, username) => (
 
-                                 <User key={username} onLoadFunction={this.props.onLoadFunction} name={user.username} description={user.email} />       
+                                 <User key={username} onLoadFunction={this.props.onLoadFunction} username={user.username} email={user.email} />       
 
                         ))}</tr>
                     </tbody>

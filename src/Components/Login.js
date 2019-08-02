@@ -19,8 +19,6 @@ export default class Login extends React.Component {
             password: e.target[1].value
         }
 
-
-
         console.log(newUser);
         axios.post("http://localhost:5000/user/createuser", newUser)
             .then(response => {

@@ -32,7 +32,6 @@ export default class App extends React.Component {
     this.onLoad();
   }
 
-
   render() {
     return (
       <div >
@@ -42,15 +41,15 @@ export default class App extends React.Component {
 
           <Route exact path="/" component={Homepage} />
 
-          <Route path="/Register" component={Register} render={() => <Register onLoadFunction={this.onload} data={this.state.data} />} />
+          <Route path="/Register" component={Register} render={() => <Register onLoadFunction={this.onLoad} data={this.state.data} />} />
 
-          <Route exact path="/UserList" render={() => <UserList onLoadFunction={this.onload} data={this.state.data} />} />
+          <Route path="/UserList" render={() => <UserList onLoadFunction={this.onLoad} data={this.state.data} />} />
 
-          <Route path="/Login" component={Login} render={() => <Login onLoadFunction={this.onload} data={this.state.data} />} />
+          <Route path="/Login" component={Login} render={() => <Login onLoadFunction={this.onLoad} data={this.state.data} />} />
 
           {this.state.data.map((user) => (
 
-            <Route path={"/" + user.name} render={() => <User passedFunction={this.onLoad}
+            <Route path={"/" + user.name} render={() => <User onLoadFunction={this.onLoad}
               username={user.username}
               email={user.email}
               password={user.password}

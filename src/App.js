@@ -41,15 +41,15 @@ export default class App extends React.Component {
 
           <Route exact path="/" component={Homepage} />
 
-          <Route path="/Register" component={Register} render={() => <Register onLoadFunction={this.onLoad} data={this.state.data} />} />
+          <Route path="/Register" component={Register} render={() => <Register data={this.state.data} />} />
 
           <Route path="/UserList" render={() => <UserList onLoadFunction={this.onLoad} data={this.state.data} />} />
 
-          <Route path="/Login" component={Login} render={() => <Login onLoadFunction={this.onLoad} data={this.state.data} />} />
+          <Route path="/Login" component={Login} render={() => <Login data={this.state.data} />} />
 
           {this.state.data.map((user) => (
 
-            <Route path={"/" + user.username + "/" + user.password} render={() => <User onLoadFunction={this.onLoad}
+            <Route path={"/user" + user.username + "/" + user.password} render={() => <User onLoadFunction={this.onLoad}
               username={user.username}
               email={user.email}
               password={user.password}
@@ -62,20 +62,3 @@ export default class App extends React.Component {
     )
   }
 }
-
-
-// <Route exact path="/" render={() => <RecipeList onLoadFunction={this.onload} data={this.state.data} />} />
-
-// <Route path="/AddRecipe" component={AddRecipe} render={() => <AddRecipe onLoadFunction={this.onload} data={this.state.data} />} />
-
-// <Route path="/MoreInfo" component={MoreInfo} render={() => <MoreInfo onLoadFunction={this.onload} data={this.state.data} />} />
-
-// {this.state.data.map((recipe) => (
-
-//   <Route path={"/" + recipe.name} render={() => <MoreInfo passedFunction={this.onLoad}
-//     name={recipe.name}
-//     description={recipe.description}
-//     ingredients={recipe.ingredients}
-//     image={recipe.image} />} />
-
-// ))}

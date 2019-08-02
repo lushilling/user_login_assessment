@@ -31,14 +31,20 @@ export default class Register extends React.Component {
             password2: e.target[3].value
         }
 
+        if (newUser.username === "" || newUser.email === "" || newUser.password === "" || newUser.password2 === "" ){
+            this.setState({error:"Please ensure you have filled out all the fields"})
+        }else{
+            this.setState({error:""})
+        }
+    
 
-
-        console.log(newUser);
         axios.post("http://localhost:5000/user/createuser", newUser)
             .then(response => {
                 this.setState({
                     data: response.data
                 });
+
+                //if passwords match request successful return message to screen
             });
     }
 
@@ -65,7 +71,8 @@ export default class Register extends React.Component {
                     </FormGroup>
                     <Button>Login</Button>
                 </Form>
-                
+                <p style={{color: 'red'}}>{this.state.error}</p>
+
             </div>
         );
     }

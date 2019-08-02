@@ -1,0 +1,78 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`render a prop 1`] = `ShallowWrapper {}`;
+
+exports[`renders App 1`] = `
+<div>
+  <div>
+    <nav
+      className="navbar navbar-expand-md navbar-dark bg-dark"
+    >
+      <a
+        className="navbar-brand"
+        href="/"
+      >
+        Assessment
+      </a>
+      <button
+        className="navbar-toggler"
+        onClick={[Function]}
+        type="button"
+      >
+        <span
+          className="navbar-toggler-icon"
+        />
+      </button>
+      <div
+        className="collapse navbar-collapse"
+        style={Object {}}
+      >
+        <ul
+          className="ml-auto navbar-nav"
+        >
+          <li
+            className="nav-item"
+          >
+            <a
+              className="nav-link"
+              href="./Register"
+              onClick={[Function]}
+            >
+              Register
+            </a>
+          </li>
+          <li
+            className="nav-item"
+          >
+            <a
+              className="nav-link"
+              href="./Login"
+              onClick={[Function]}
+            >
+              Login
+            </a>
+          </li>
+          <li
+            className="nav-item"
+          >
+            <a
+              className="nav-link"
+              href="./UserList"
+              onClick={[Function]}
+            >
+              User List
+            </a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </div>
+  <div>
+    <p />
+    <br />
+    <p>
+      On this React app you can register a user, login as a user and view a list of users
+    </p>
+  </div>
+</div>
+`;

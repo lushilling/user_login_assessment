@@ -12,19 +12,6 @@ it('renders App', () => {
     expect(tree).toMatchSnapshot();
   })
 
-
-// it('renders router without crashing', () => {
-//   const div = document.createElement('div');
-//   ReactDOM.render(<Router />, div);
-//   ReactDOM.unmountComponentAtNode(div);
-// });
-
-// it('renders navigation bar without crashing', () => {
-//     const div = document.createElement('div');
-//     ReactDOM.render(<NavigationBar />, div);
-//     ReactDOM.unmountComponentAtNode(div);
-//   });
-
 it('renders app without crashing', () => {
   shallow(<Login />);
 });

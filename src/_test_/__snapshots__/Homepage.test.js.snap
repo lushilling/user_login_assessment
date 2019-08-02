@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders Homepage 1`] = `
+<div>
+  <p />
+  <br />
+  <p>
+    On this React app you can register a user, login as a user and view a list of users
+  </p>
+</div>
+`;

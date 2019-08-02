@@ -1,8 +1,6 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
 import { shallow } from 'enzyme';
 import renderer from 'react-test-renderer';
-import { BrowserRouter as Router, Route } from "react-router-dom";
 
 import Register from '../Components/Register';
 

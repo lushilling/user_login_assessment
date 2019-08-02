@@ -14,8 +14,8 @@ it('renders Homepage', () => {
     expect(tree).toMatchSnapshot();
 })
 
-it('renders router without crashing', () => {
+it('renders homepage without crashing', () => {
     const div = document.createElement('div');
     ReactDOM.render(<Homepage />, div);
     ReactDOM.unmountComponentAtNode(div);
-  });
+});

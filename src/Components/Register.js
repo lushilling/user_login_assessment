@@ -31,9 +31,6 @@ export default class Register extends React.Component {
             password2: e.target[3].value
         }
 
-
-
-        console.log(newUser);
         axios.post("http://localhost:5000/user/createuser", newUser)
             .then(response => {
                 this.setState({
@@ -65,7 +62,7 @@ export default class Register extends React.Component {
                     </FormGroup>
                     <Button>Login</Button>
                 </Form>
-                
+
             </div>
         );
     }

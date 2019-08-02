@@ -10,9 +10,7 @@ export default class UserList extends React.Component {
                 <Table>
                     <tbody>
                         <tr>{this.props.data.map((user, username) => (
-
                                  <User key={username} onLoadFunction={this.props.onLoadFunction} username={user.username} email={user.email} />       
-
                         ))}</tr>
                     </tbody>
                 </Table>

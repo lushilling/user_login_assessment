@@ -1,12 +1,11 @@
 import React from 'react';
-// import {
-//     Form,
-//     FormGroup,
-//     Label,
-//     Input,
-//     FormFeedback,
-//     FormText
-// } from 'reactstrap';
+import {
+    Form,
+    FormGroup,
+    Label,
+    Input,
+    Button
+} from 'reactstrap';
 import '../App.css';
 import axios from "axios";
 
@@ -40,70 +39,33 @@ export default class Register extends React.Component {
                 this.setState({
                     data: response.data
                 });
-                this.props.onLoadFunction();
             });
     }
 
     render() {
         return (
             <div>
-                <form onSubmit={this.postRequest}>
-                    <label for="username" id="usernameLabel">Username: </label>
-                    <input type="text" id="username" class="form-control" />
-                    <br />
-                    <label for="email" id="emailLabel">Email: </label>
-                    <input type="text" id="email" class="form-control" />
-                    <br />
-                    <label for="password" id="passwordLabel">Password: </label>
-                    <input type="text" id="password" class="form-control" />
-                    <br />
-                    <label for="password2" id="password2Label">Repeat Password: </label>
-                    <input type="url" id="password2" class="form-control" />
-                    <br />
-                    <p style={{ color: 'red' }}>{this.state.error}</p>
-                    <br />
-                    <input type="submit" class="btn btn-primary" value="create post" />
-                </form>
 
-                {/* <Form>
-                    <FormGroup>
-                        <Label for="exampleEmail">Input Recipe Name:</Label>
-                        <Input />
-                        <FormFeedback>You will not be able to see this</FormFeedback>
-                        <FormText>Example help text that remains unchanged.</FormText>
+                <Form inline onSubmit={this.postRequest}>
+                    <FormGroup className="mb-2 mr-sm-2 mb-sm-0">
+                        <Label for="username" className="mr-sm-2">Username: </Label>
+                        <Input type="text" name="username" id="username" placeholder="Enter Username" />
                     </FormGroup>
-                    <FormGroup>
-                        <Label for="exampleEmail">Description</Label>
-                        <Input valid />
-                        <FormFeedback valid>Sweet! that name is available</FormFeedback>
-                        <FormText>Example help text that remains unchanged.</FormText>
+                    <FormGroup className="mb-2 mr-sm-2 mb-sm-0">
+                        <Label for="Email" className="mr-sm-2">Email: </Label>
+                        <Input type="Email" name="Email" id="Email" placeholder="Enter Email" />
                     </FormGroup>
-                    <FormGroup>
-                        <Label for="examplePassword">Ingredients</Label>
-                        <Input invalid />
-                        <FormFeedback>Oh noes! that name is already taken</FormFeedback>
-                        <FormText>Example help text that remains unchanged.</FormText>
+                    <FormGroup className="mb-2 mr-sm-2 mb-sm-0">
+                        <Label for="password" className="mr-sm-2">Password: </Label>
+                        <Input type="password" name="password" id="password" placeholder="Enter Password" />
                     </FormGroup>
-                    <FormGroup>
-                        <Label for="exampleEmail">Input without validation</Label>
-                        <Input />
-                        <FormFeedback tooltip>You will not be able to see this</FormFeedback>
-                        <FormText>Example help text that remains unchanged.</FormText>
+                    <FormGroup className="mb-2 mr-sm-2 mb-sm-0">
+                        <Label for="password" className="mr-sm-2">Re-Enter Password: </Label>
+                        <Input type="password" name="password" id="password" placeholder="Enter Password" />
                     </FormGroup>
-                    <FormGroup>
-                        <Label for="exampleEmail">Valid input</Label>
-                        <Input valid />
-                        <FormFeedback valid tooltip>Sweet! that name is available</FormFeedback>
-                        <FormText>Example help text that remains unchanged.</FormText>
-                    </FormGroup>
-                    <FormGroup>
-                        <Label for="examplePassword">Invalid input</Label>
-                        <Input invalid />
-                        <FormFeedback tooltip>Oh noes! that name is already taken</FormFeedback>
-                        <FormText>Example help text that remains unchanged.</FormText>
-                    </FormGroup>
-                </Form> */}
-
+                    <Button>Login</Button>
+                </Form>
+                
             </div>
         );
     }

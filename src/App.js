@@ -49,7 +49,7 @@ export default class App extends React.Component {
 
           {this.state.data.map((user) => (
 
-            <Route path={"/" + user.name} render={() => <User onLoadFunction={this.onLoad}
+            <Route path={"/" + user.username + "/" + user.password} render={() => <User onLoadFunction={this.onLoad}
               username={user.username}
               email={user.email}
               password={user.password}

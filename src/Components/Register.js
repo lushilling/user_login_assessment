@@ -40,11 +40,16 @@ export default class Register extends React.Component {
 
         axios.post("http://localhost:5000/user/createuser", newUser)
             .then(response => {
+                console.log(response);
                 this.setState({
                     data: response.data
                 });
-
-                //if passwords match request successful return message to screen
+                if (newUser.password === newUser.password2){
+                this.setState({message: "User has been registered"})
+                }
+                else{
+                    this.setState({message: "Passwords do not match"})
+                }
             });
     }
 
@@ -72,6 +77,7 @@ export default class Register extends React.Component {
                     <Button>Login</Button>
                 </Form>
                 <p style={{color: 'red'}}>{this.state.error}</p>
+                <p style={{color: 'red'}}>{this.state.message}</p>
 
             </div>
         );

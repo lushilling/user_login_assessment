@@ -27,9 +27,12 @@ export default class Login extends React.Component {
 
         axios.get("http://localhost:5000/user/name/" + loginUser.username + "/" + loginUser.password)
             .then(response => {
+                console.log(response);
                 this.setState({
                     data: response.data
                 });
+
+                //if login sucessful return message
             });
     }
     render() {
@@ -47,6 +50,7 @@ export default class Login extends React.Component {
                     <Button>Login</Button>
                 </Form>
                 <p style={{ color: 'red' }}>{this.state.error}</p>
+                <p>{this.response}</p>
             </div>
         );
     }

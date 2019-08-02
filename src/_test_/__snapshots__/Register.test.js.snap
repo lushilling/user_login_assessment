@@ -1,0 +1,199 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders App 1`] = `
+<div>
+  <form
+    className="form-inline"
+    onSubmit={[Function]}
+  >
+    <div
+      className="mb-2 mr-sm-2 mb-sm-0 form-group"
+    >
+      <label
+        className="mr-sm-2"
+        htmlFor="username"
+      >
+        Username: 
+      </label>
+      <input
+        className="form-control"
+        id="username"
+        name="username"
+        placeholder="Enter Username"
+        type="text"
+      />
+    </div>
+    <div
+      className="mb-2 mr-sm-2 mb-sm-0 form-group"
+    >
+      <label
+        className="mr-sm-2"
+        htmlFor="Email"
+      >
+        Email: 
+      </label>
+      <input
+        className="form-control"
+        id="Email"
+        name="Email"
+        placeholder="Enter Email"
+        type="Email"
+      />
+    </div>
+    <div
+      className="mb-2 mr-sm-2 mb-sm-0 form-group"
+    >
+      <label
+        className="mr-sm-2"
+        htmlFor="password"
+      >
+        Password: 
+      </label>
+      <input
+        className="form-control"
+        id="password"
+        name="password"
+        placeholder="Enter Password"
+        type="password"
+      />
+    </div>
+    <div
+      className="mb-2 mr-sm-2 mb-sm-0 form-group"
+    >
+      <label
+        className="mr-sm-2"
+        htmlFor="password"
+      >
+        Re-Enter Password: 
+      </label>
+      <input
+        className="form-control"
+        id="password"
+        name="password"
+        placeholder="Enter Password"
+        type="password"
+      />
+    </div>
+    <button
+      aria-label={null}
+      className="btn btn-secondary"
+      onClick={[Function]}
+    >
+      Login
+    </button>
+  </form>
+  <p
+    style={
+      Object {
+        "color": "red",
+      }
+    }
+  />
+  <p
+    style={
+      Object {
+        "color": "red",
+      }
+    }
+  />
+</div>
+`;
+
+exports[`renders register 1`] = `
+<div>
+  <form
+    className="form-inline"
+    onSubmit={[Function]}
+  >
+    <div
+      className="mb-2 mr-sm-2 mb-sm-0 form-group"
+    >
+      <label
+        className="mr-sm-2"
+        htmlFor="username"
+      >
+        Username: 
+      </label>
+      <input
+        className="form-control"
+        id="username"
+        name="username"
+        placeholder="Enter Username"
+        type="text"
+      />
+    </div>
+    <div
+      className="mb-2 mr-sm-2 mb-sm-0 form-group"
+    >
+      <label
+        className="mr-sm-2"
+        htmlFor="Email"
+      >
+        Email: 
+      </label>
+      <input
+        className="form-control"
+        id="Email"
+        name="Email"
+        placeholder="Enter Email"
+        type="Email"
+      />
+    </div>
+    <div
+      className="mb-2 mr-sm-2 mb-sm-0 form-group"
+    >
+      <label
+        className="mr-sm-2"
+        htmlFor="password"
+      >
+        Password: 
+      </label>
+      <input
+        className="form-control"
+        id="password"
+        name="password"
+        placeholder="Enter Password"
+        type="password"
+      />
+    </div>
+    <div
+      className="mb-2 mr-sm-2 mb-sm-0 form-group"
+    >
+      <label
+        className="mr-sm-2"
+        htmlFor="password"
+      >
+        Re-Enter Password: 
+      </label>
+      <input
+        className="form-control"
+        id="password"
+        name="password"
+        placeholder="Enter Password"
+        type="password"
+      />
+    </div>
+    <button
+      aria-label={null}
+      className="btn btn-secondary"
+      onClick={[Function]}
+    >
+      Login
+    </button>
+  </form>
+  <p
+    style={
+      Object {
+        "color": "red",
+      }
+    }
+  />
+  <p
+    style={
+      Object {
+        "color": "red",
+      }
+    }
+  />
+</div>
+`;

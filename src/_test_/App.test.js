@@ -14,20 +14,19 @@ it('renders App', () => {
   })
 
 
-it('renders without crashing', () => {
+it('renders router without crashing', () => {
   const div = document.createElement('div');
   ReactDOM.render(<Router />, div);
   ReactDOM.unmountComponentAtNode(div);
 });
 
-
-it('renders without crashing', () => {
+it('renders navigation bar without crashing', () => {
     const div = document.createElement('div');
     ReactDOM.render(<NavigationBar />, div);
     ReactDOM.unmountComponentAtNode(div);
   });
 
-it('renders without crashing', () => {
+it('renders app without crashing', () => {
   shallow(<App />);
 });
 
@@ -39,7 +38,7 @@ it('renders routingExample comp', () => {
 
 //Testing rendering a Prop
 it("render a prop", () => {
-  const wrapper = shallow(<App name="A Name" />);
-  expect(wrapper.instance().props.name).toEqual("A Name");
+  const wrapper = shallow(<App username="A Name" />);
+  expect(wrapper.instance().props.username).toEqual("A Name");
   expect(wrapper).toMatchSnapshot();
 });

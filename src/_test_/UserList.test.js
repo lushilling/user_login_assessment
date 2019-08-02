@@ -5,7 +5,7 @@ import renderer from 'react-test-renderer';
 import UserList from '../Components/UserList';
 
 
-// it('snapshot user list', () => {
-//     const tree = renderer.create(<UserList passedFunction={"this.props.onLoadFunction"} dataSent={[]} />).toJSON()
-//     expect(tree).toMatchSnapshot();
-// })
+it('snapshot user list', () => {
+    const tree = renderer.create(<UserList onLoadFunction={"this.props.onLoadFunction"} data={[]} />).toJSON()
+    expect(tree).toMatchSnapshot();
+})

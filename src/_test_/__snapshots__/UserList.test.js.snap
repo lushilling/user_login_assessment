@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`snapshot user list 1`] = `
+<div>
+  <table
+    className="table"
+  >
+    <tbody>
+      <tr />
+    </tbody>
+  </table>
+</div>
+`;

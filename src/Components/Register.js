@@ -40,7 +40,6 @@ export default class Register extends React.Component {
 
         axios.post("http://localhost:5000/user/createuser", newUser)
             .then(response => {
-                console.log(response);
                 this.setState({
                     data: response.data
                 });

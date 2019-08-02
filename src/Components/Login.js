@@ -27,8 +27,6 @@ export default class Login extends React.Component {
 
         axios.get("http://localhost:5000/user/name/" + loginUser.username + "/" + loginUser.password)
             .then(response => {
-                console.log(response);
-                console.log(response.data);
                 this.setState({
                     data: response.data
                 });

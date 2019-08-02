@@ -1,0 +1,10 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders user 1`] = `
+<tr>
+  <td>
+    <h4 />
+    <p />
+  </td>
+</tr>
+`;

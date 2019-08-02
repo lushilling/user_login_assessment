@@ -5,6 +5,7 @@ import { BrowserRouter as Router, Route } from "react-router-dom";
 
 import NavigationBar from './Components/NavigationBar';
 import Homepage from './Components/Homepage';
+import Register from './Components/Register';
 
 export default class App extends React.Component {
 
@@ -15,18 +16,18 @@ export default class App extends React.Component {
     };
   }
 
-  // onLoad = () => {
-  //   axios.get("http://localhost:5000/user/all")
-  //     .then(response => {
-  //       this.setState({
-  //         data: response.data
-  //       })
-  //     })
-  // }
+  onLoad = () => {
+    axios.get("http://localhost:5000/user/all")
+      .then(response => {
+        this.setState({
+          data: response.data
+        })
+      })
+  }
 
-  // componentDidMount() {
-  //   this.onLoad();
-  // }
+  componentDidMount() {
+    this.onLoad();
+  }
 
 
   render() {
@@ -36,7 +37,9 @@ export default class App extends React.Component {
 
           <NavigationBar />
 
-          <Route exact path="/" component={Homepage}/>
+          <Route exact path="/" component={Homepage} />
+
+          <Route path="/Register" component={Register} render={() => <Register onLoadFunction={this.onload} data={this.state.data} />} />
 
         </Router>
       </div >
